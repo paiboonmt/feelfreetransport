@@ -1,3 +1,10 @@
+<style>
+    .nav-link{
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: uppercase
+    }
+</style>
 <nav class="navbar navbar-expand-lg" style="background-color: rgb(7, 161, 143);">
     <div class="container">
 
@@ -14,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Conditions</a>
+                    <a class="nav-link active" href="#" style="color: white;">Conditions</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">FAQ</a>

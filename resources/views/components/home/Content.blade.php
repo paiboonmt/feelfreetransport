@@ -175,18 +175,41 @@
         </div>
         {{-- ภาพ --}}
         <div class="col-md-4 ms-auto ">
-            <div class="card">
-                <div class="card-header text-center">
-                    <h3> Our Vehicles </h3>
-                    <p>(All have Air-Conditioning )</p>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <img src="{{ asset('images/car/car1.png') }}" class="d-block w-100 h-100">
+            <div class="row mb-3">
+                <div class="col mb-2">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3> Our Vehicles </h3>
+                            <p>(All have Air-Conditioning )</p>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <img src="{{ asset('images/car/suv1.png') }}" class="d-block w-100 h-100">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-center">Izuzu Mux 2024</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card-footer">
-                    <p class="text-center">Izuzu Mux 2024</p>
+            </div>
+
+            <div class="row">
+                <div class="col mb-2">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h3> Our Vehicles </h3>
+                            <p>(All have Air-Conditioning )</p>
+                        </div>
+                        <div class="card-body">
+                            <div>
+                                <img src="{{ asset('images/car/Minibus1.jpg') }}" class="d-block w-100 h-100">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-center">Minibus Standart</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
