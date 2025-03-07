@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -8,10 +9,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
 // Homecontroller is now a closure function
 Route::get('/',[HomeController::class,'index'])->name('index');
 
+
+// OrderController is now a closure function
+Route::post('/order',[OrderController::class,'index'])->name('order.index');
 
 
 Route::get('/dashboard', function () {

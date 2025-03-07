@@ -1,7 +1,15 @@
+<style>
+    img {
+
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="" class="d-block w-100" height="250px" style="background-color: red">
+            <img src="{{ asset('images/carouse/caruso1.jpg') }}" class="d-block w-100">
         </div>
         <div class="carousel-item">
             <img src="" class="d-block w-100" height="250px" style="background-color: yellow">

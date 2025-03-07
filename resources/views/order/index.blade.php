@@ -16,24 +16,10 @@
 </head>
 
 <body>
-
     @include('navbar')
-    {{-- @include('components.home.Carousel') --}}
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center mt-5">Welcome to : <span style="font-size: 35px; font-weight:bold">FeelFree Transport</span></h1>
-            </div>
-        </div>
-    </div>
+    @dump($data,$data['form'])
 
-    @include('components.home.Content')
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </html>
