@@ -8,23 +8,6 @@ class OrderController extends Controller
 {
     public function index( Request $request )
     {
-        // dump( $request->all() );
-
-        // "form" => "Phuket Airport"
-        // "to" => "Bang Rong Pier"
-        // "journey" => "One Way"
-        // "vehicle_type" => "Standard Car - 3 pax"
-        // "vehicle" => "1"
-        // "passengers" => "1"
-        // "hotel" => "Hotel Name"
-        // "destination" => "Hotel name in destination"
-        // "pick_up_date" => "2025-03-06"
-        // "pick_up_time" => "23:17"
-        // "passenger_name" => "Lead Passenger name"
-        // "phone" => "22334455"
-        // "email" => "dev@test"
-        // "remark" => "remark"
-
         $data = [
             'form' => $request->form,
             'to' => $request->to,

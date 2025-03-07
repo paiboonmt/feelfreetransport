@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <label>Form </label>
                             <select name="form" class="form-control">
-                                <option value="" disabled selected>-- Choose --</option>
+                                {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="Phuket Airport">Phuket-Airport</option>
                                 <option value="Ao Por / Point Yamu">Ao Por / Point Yamu</option>
                                 <option value="Bang Rong Pier">Bang Rong Pier</option>
@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label>To</label>
                             <select name="to" class="form-control">
-                                <option value="" disabled selected>-- Choose --</option>
+                                {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="Phuket Airport">Phuket-Airport</option>
                                 <option value="Ao Por / Point Yamu">Ao Por / Point Yamu</option>
                                 <option value="Bang Rong Pier">Bang Rong Pier</option>
@@ -53,7 +53,7 @@
                         <div class="form-group">
                             <label>Pleases Select Your journy</label>
                             <select name="journey" class="form-control">
-                                <option value="" disabled selected>-- Choose --</option>
+                                {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="One Way">One Way</option>
                                 <option value="Round Trip">Round Trip</option>
                             </select>
@@ -63,7 +63,7 @@
                         <div class="form-group">
                             <label>Pleaese Select Vehicle type</label>
                             <select name="vehicle_type" class="form-control">
-                                <option value="" disabled selected>-- Choose --</option>
+                                {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="Standard Car - 3 pax">Standard Car - 3 pax</option>
                                 <option value="Luxury SUV - 4 pax">Luxury SUV - 4 pax</option>
                                 <option value="Standart Minibus - 8 pax">Standart Minibus - 8 pax</option>
@@ -104,13 +104,13 @@
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Hotel Name</label>
-                            <input type="text" name="hotel" class="form-control" required>
+                            <input type="text" name="hotel" class="form-control" value="Patong Hotel" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Hotel name in destination</label>
-                            <input type="text" name="destination" class="form-control" required>
+                            <input type="text" name="destination" value="Patong" class="form-control" required>
                         </div>
                     </div>
                 </div>
@@ -120,13 +120,13 @@
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Required Pick-up date</label>
-                            <input type="date" name="pick_up_date" class="form-control" required>
+                            <input type="date" name="pick_up_date" value="{{ \Carbon\Carbon::now()->format('Y-m-d') }}" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Required Pick-up time</label>
-                            <input type="time" name="pick_up_time" class="form-control" required>
+                            <input type="time" name="pick_up_time" value="{{ \Carbon\Carbon::now()->format('H:i') }}" class="form-control" required>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Lead Passenger name</label>
-                            <input type="text" name="passenger_name" class="form-control" required>
+                            <input type="text" name="passenger_name" value="DevTiger" class="form-control" required>
                         </div>
                     </div>
                 </div>
@@ -145,20 +145,20 @@
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Mobile Phone No.( With country code )</label>
-                            <input type="number" name="phone" class="form-control" required>
+                            <input type="number" name="phone" value="0952566992" class="form-control" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" name="email" class="form-control" required>
+                            <input type="email" name="email" value="Dev@local.com" class="form-control" required>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12 col-sm-6 mb-3">
-                        <textarea name="remark" class="form-control" placeholder="Remark" cols="30" rows="3"></textarea>
+                        <textarea name="remark" class="form-control" placeholder="Remark" cols="30" rows="3">Lorem ipsum dolor sit amet.</textarea>
                     </div>
                 </div>
 
@@ -169,9 +169,7 @@
                 </div>
 
             </form>
-
             <hr>
-
         </div>
         {{-- ภาพ --}}
         <div class="col-md-4 ms-auto ">
