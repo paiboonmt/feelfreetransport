@@ -2,29 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function index( Request $request )
+
+    public function index()
     {
-        $validation = $request->validate([
-            'form' => 'required',
-            'to' => 'required',
-            'journey' => 'required',
-            'vehicle_type' => 'required',
-            'vehicle' => 'required',
-            'passengers' => 'required',
-            'hotel' => 'required',
-            'destination' => 'required',
-            'pick_up_date' => 'required',
-            'pick_up_time' => 'required',
-            'passenger_name' => 'required',
-            'phone' => 'required',
-            'email' => 'required',
-            'remark' => 'required',
+        return view('booking.index');
+    }
+
+    public function store( Request $request )
+    {
+        // dd($request->all());
+        Booking::create([
+            'from' => $request->from,
+            'to' => $request->to,
+            'journy' => $request->journy,
+            'vehicle_type' => $request->vehicle_type,
+            'vehicle' => $request->vehicle,
+            'passengers' => $request->passengers,
+            'hotel' => $request->hotel,
+            'destination' => $request->destination,
+            'pick_up_date' => $request->pick_up_date,
+            'pick_up_time' => $request->pick_up_time,
+            'passenger_name' => $request->passenger_name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'remark' => $request->remark,
         ]);
 
-        return view('booking.index',compact('data'));
+        return redirect()->route('booking.index')->with('success','Booking created successfully');
     }
 }

@@ -1,5 +1,5 @@
 <style>
-    .nav-link{
+    .nav-link {
         font-size: 16px;
         font-weight: 500;
         text-transform: uppercase
@@ -35,6 +35,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">About us</a>
                 </li>
+                @if (Route::has('login'))
+                    <li class="nav-item">
+                      
+                        <a href="{{ route('login') }}" class="nav-link">
+                            Login
+                        </a>
+
+                        {{-- @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="nav-link">
+                                Register
+                            </a>
+                        @endif --}}
+                        
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

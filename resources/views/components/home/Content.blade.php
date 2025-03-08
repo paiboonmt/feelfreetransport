@@ -26,7 +26,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label>Form </label>
-                            <select name="form" class="form-control">
+                            <select name="from" class="form-control">
                                 {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="Phuket Airport">Phuket-Airport</option>
                                 <option value="Ao Por / Point Yamu">Ao Por / Point Yamu</option>
@@ -52,7 +52,7 @@
                     <div class="col-md-6 col-sm-12 mb-3">
                         <div class="form-group">
                             <label>Pleases Select Your journy</label>
-                            <select name="journey" class="form-control">
+                            <select name="journy" class="form-control">
                                 {{-- <option value="" disabled selected>-- Choose --</option> --}}
                                 <option value="One Way">One Way</option>
                                 <option value="Round Trip">Round Trip</option>

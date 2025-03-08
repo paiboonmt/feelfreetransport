@@ -14,7 +14,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('resources/css/google-font.css') }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 </head>
 
 <body>
@@ -30,15 +30,15 @@
                         <h3>Confirm Booking</h3>
                     </div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="{{ route('booking.store') }}" method="post">
                             @csrf
                             {{-- form to --}}
                             <div class="row mb-3">
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label class="form-label">Form</label>
-                                        <input type="text" class="form-control" name="form" readonly
-                                            value="{{ $data['form'] }}">
+                                        <input type="text" class="form-control" name="from" readonly
+                                            value="{{ $data['from'] }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
@@ -54,7 +54,7 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Your journy</label>
-                                        <input type="text" class="form-control" name="journy" readonly value="{{ $data['journey'] }}">
+                                        <input type="text" class="form-control" name="journy" readonly value="{{ $data['journy'] }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">
@@ -123,7 +123,7 @@
                                 <div class="col-md-6 col-sm-12">
                                     <div class="form-group">
                                         <label>Mobile Phone No.( With country code )</label>
-                                        <input type="number" class="form-control" name="hotel" readonly value="{{ $data['phone'] }}">
+                                        <input type="number" class="form-control" name="phone" readonly value="{{ $data['phone'] }}">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-12">

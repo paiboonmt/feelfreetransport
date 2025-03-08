@@ -9,9 +9,9 @@ class OrderController extends Controller
     public function index( Request $request )
     {
         $data = [
-            'form' => $request->form,
+            'from' => $request->from,
             'to' => $request->to,
-            'journey' => $request->journey,
+            'journy' => $request->journy,
             'vehicle_type' => $request->vehicle_type,
             'vehicle' => $request->vehicle,
             'passengers' => $request->passengers,
