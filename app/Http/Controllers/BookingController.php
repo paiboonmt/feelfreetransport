@@ -35,7 +35,9 @@ class BookingController extends Controller
             'phone' => $request->phone,
             'email' => $request->email,
             'remark' => $request->remark,
+            'date' => Carbon::now()->setTimezone('Asia/Bangkok')->format('Y-m-d H:i:s'),
         ]);
+
 
         $bookingData = [
             'from' => $request->from,
@@ -52,12 +54,14 @@ class BookingController extends Controller
             'phone' => $request->phone,
             'email' => $request->email,
             'remark' => $request->remark,
-            'created_at' => Carbon::now()->setTimezone('Asia/Bangkok')
+            'date' => Carbon::now()->setTimezone('Asia/Bangkok')->format('Y-m-d H:i:s'),
         ];
 
-        $toEmail = "paiboon500@gmail.com";
+        // dd($bookingData['date']);
+
+        // $toEmail = "paiboon500@gmail.com";
         // $toEmail = "contact@feelfreetransport.com";
-        Mail::to($toEmail)->send(new EmailController($bookingData));
+        // Mail::to($toEmail)->send(new EmailController($bookingData));
 
         return redirect()->route('booking.index')->with('success','Booking created successfully');
     }

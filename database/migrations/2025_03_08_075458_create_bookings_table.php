@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('remark');
             $table->string('status')->default('pending');
+            $table->date('date')->default(now());
             $table->timestamps();
         });
     }

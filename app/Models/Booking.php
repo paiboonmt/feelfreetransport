@@ -22,5 +22,6 @@ class Booking extends Model
         'email',
         'remark',
         'status',
+        'date',
     ];
 }
