@@ -30,8 +30,14 @@ Route::post('/order',[OrderController::class,'index'])->name('order.index');
 
 // BookingController is now a closure function
 Route::get('/booking',[BookingController::class,'index'])->name('booking.index');
-Route::post('/booking',[BookingController::class,'store'])->name('booking.store');  
+Route::post('/booking',[BookingController::class,'store'])->name('booking.store');
 
-
+// Admin routes
+// BookingController is now a closure function
+Route::get('/admin/booking',[BookingController::class,'index'])->name('admin.booking.index');
+Route::get('/admin/booking/{booking}',[BookingController::class,'show'])->name('admin.booking.show');
+Route::get('/admin/booking/{booking}/edit',[BookingController::class,'edit'])->name('admin.booking.edit');
+Route::patch('/admin/booking/{booking}',[BookingController::class,'update'])->name('admin.booking.update');
+Route::delete('/admin/booking/{booking}',[BookingController::class,'destroy'])->name('admin.booking.destroy');
 
 require __DIR__.'/auth.php';
