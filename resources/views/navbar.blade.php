@@ -21,10 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="{{ route('index') }}" style="color: white;">Conditions</a>
+                    <a class="nav-link {{ request()->routeIs('index') ? 'active' : '' }}" href="{{ route('index') }}">Conditions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link {{ request()->routeIs('faq') ? 'active' : '' }}" href="{{ route('faq') }}">FAQ</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Vehiclerental</a>
@@ -37,7 +37,7 @@
                 </li>
                 @if (Route::has('login'))
                     <li class="nav-item">
-                      
+
                         <a href="{{ route('login') }}" class="nav-link">
                             Login
                         </a>
@@ -47,7 +47,7 @@
                                 Register
                             </a>
                         @endif --}}
-                        
+
                     </li>
                 @endif
             </ul>
