@@ -23,9 +23,12 @@
 
     <div class="container">
         <div class="row">
+            <div class="col-12 text-center">
+                <h1 style="text-transform: uppercase"> Vehiclerental </h1>
+            </div>
+            <hr>
             <div class="col-md-12">
-                <h1 class="text-center mt-5">Welcome to : <span style="font-size: 35px; font-weight:bold">FAQ</span>
-                </h1>
+               
                 <div class="faq-content mt-4">
                     <h2>FAQ - FeelFree Transport</h2>
                     <ol>

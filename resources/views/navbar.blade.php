@@ -5,7 +5,7 @@
         text-transform: uppercase
     }
 </style>
-<nav class="navbar navbar-expand-lg" style="background-color: rgb(7, 161, 143);">
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: rgb(7, 182, 161);">
     <div class="container">
 
         <a class="navbar-brand" href="{{ route('index') }}">
@@ -27,29 +27,33 @@
                     <a class="nav-link {{ request()->routeIs('faq') ? 'active' : '' }}" href="{{ route('faq') }}">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Vehiclerental</a>
+                    <a class="nav-link {{ request()->routeIs('vehicle') ? 'active' : '' }}" href="{{ route('vehicle') }}">Vehiclerental</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link {{ request()->routeIs('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About us</a>
                 </li>
+               
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 @if (Route::has('login'))
-                    <li class="nav-item">
+                <li class="nav-item">
 
-                        <a href="{{ route('login') }}" class="nav-link">
-                            Login
+                    <a href="{{ route('login') }}" class="nav-link btn btn-sm btn-outline-success" >
+                        Login
+                    </a>
+
+                    {{-- @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="nav-link">
+                            Register
                         </a>
+                    @endif --}}
 
-                        {{-- @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="nav-link">
-                                Register
-                            </a>
-                        @endif --}}
-
-                    </li>
-                @endif
+                </li>
+            @endif
             </ul>
         </div>
     </div>
