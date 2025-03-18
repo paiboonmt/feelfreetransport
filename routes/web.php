@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\AdminBookingController;
+use App\Http\Controllers\Admin\AdminReportController;
+use App\Http\Controllers\Admin\AdminSettingController;
+use App\Http\Controllers\Admin\AdminStationController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -55,6 +60,34 @@ Route::controller(AboutController::class)->group(function () {
     Route::get('/about', 'index')->name('about');
 });
 
+
+// Admin routes
+Route::middleware('auth')->group(function () {
+    Route::controller(DashboardController::class)->group(function () {
+        Route::get('/admin/dashboard', 'index')->name('admin.dashboard');
+    });
+
+    //AdminBookingController is now a closure function
+    Route::controller(AdminBookingController::class)->group(function () {
+        Route::get('/admin/booking', 'index')->name('admin.booking');
+    });
+
+    //AdminStatusController is now a closure function
+    Route::controller(AdminStationController::class)->group(function () {
+        Route::get('/admin/station', 'index')->name('admin.station');
+    });
+
+    //AdminReportController is now a closure function
+    Route::controller(AdminReportController::class)->group(function () {
+        Route::get('/admin/report', 'index')->name('admin.report');
+    });
+
+    //AdminSettingController is now a closure function
+    Route::controller(AdminSettingController::class)->group(function () {
+        Route::get('/admin/setting', 'index')->name('admin.setting');
+    });
+
+});
 
 
 require __DIR__.'/auth.php';
