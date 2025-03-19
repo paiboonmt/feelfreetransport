@@ -72,9 +72,10 @@ Route::middleware('auth')->group(function () {
         Route::get('/admin/booking', 'index')->name('admin.booking');
     });
 
-    //AdminStatusController is now a closure function
+    //AdminStationController is now a closure function
     Route::controller(AdminStationController::class)->group(function () {
-        Route::get('/admin/station', 'index')->name('admin.station');
+        Route::get('/admin/station', 'index')->name('admin.station.index');
+        Route::get('/admin/station/create', 'create')->name('admin.station.create');
     });
 
     //AdminReportController is now a closure function

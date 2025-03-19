@@ -10,9 +10,11 @@ class AdminBookingController extends Controller
 {
     public function index()
     {
+        $title = 'Booking List';
         $bookings = Booking::all();
         return view('admin.booking.index'
-            , ['bookings' => $bookings]
+            ,['bookings' => $bookings]
+            ,['title' => $title]
         );
     }
 }
